@@ -12,7 +12,7 @@ export default function Navigation() {
           <li key={item.label}>
             <a
               href={item.href}
-              className="text-sm text-neutral-400 hover:text-white transition-colors"
+              className=" text-neutral-400 hover:text-white transition-colors"
             >
               {item.label}
             </a>
