@@ -6,9 +6,11 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Frontend Developer Portfolio",
-  description:
-    "Frontend Developer specializing in React and modern web technologies",
+  title: "Polegoshko Mark",
+  description: "Frontend Developer Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
