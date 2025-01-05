@@ -3,19 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --accent: #3b82f6;
+  --glow1: rgba(59, 130, 246, 0.5);
+  --glow2: rgba(112, 124, 233, 0.42);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.glow {
+  position: fixed;
+  width: 55%;
+  height: 55%;
+  filter: blur(100px);
+  opacity: 0.5;
+  border-radius: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-1 {
+  top: -25%;
+  left: -25%;
+  background: var(--glow1);
+}
+
+.glow-2 {
+  bottom: -25%;
+  right: -25%;
+  background: var(--glow2);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.brutalist-card {
+  @apply bg-neutral-900/50 border-2 border-neutral-800 p-6 rounded-xl hover:border-blue-500   transition-colors duration-300;
+}
+
+.brutalist-skills-card {
+  @apply bg-neutral-900/50 p-6 rounded-xl transition-colors duration-300 shadow-xl shadow-blue-500/20;
+}
+
+.brutalist-card:hover {
+  @apply shadow-lg shadow-blue-500/20;
+}
+
+.brutalist-title {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight;
+}
+
+.brutalist-text {
+  @apply text-neutral-400;
 }
