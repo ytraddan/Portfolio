@@ -14,8 +14,8 @@ export default function Hero() {
           <p className="brutalist-text text-lg md:text-xl max-w-2xl">
             Hey! I&apos;m a frontend developer who loves creating delightful web
             experiences. I enjoy working with React and Next.js to build
-            intuitive interfaces that people would love using. Always excited to
-            turn creative ideas into smooth, responsive applications.
+            intuitive interfaces that people would love to use. Always excited
+            to turn creative ideas into smooth, responsive applications.
           </p>
         </div>
         <Contacts />
