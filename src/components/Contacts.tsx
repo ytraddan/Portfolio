@@ -13,7 +13,9 @@ export default function Contacts() {
           className="group brutalist-card-small flex items-center gap-2 text-xs md:text-base"
         >
           {iconSVG}
-          <span className="group-hover:text-blue-500">{label}</span>
+          <span className="group-hover:text-blue-500 transition-colors">
+            {label}
+          </span>
         </Link>
       ))}
       <Email />
@@ -45,10 +47,12 @@ function Email() {
         >
           <path d="M29 4H3a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h26a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-.72 2L16 14.77 3.72 6zM30 25a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.23l13.42 9.58a1 1 0 0 0 1.16 0L30 7.23z" />
         </svg>
-        <span className="group-hover:text-blue-500">Email</span>
+        <span className="group-hover:text-blue-500 transition-colors">
+          Email
+        </span>
       </div>
       <div
-        className={`absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-zinc-900 backdrop-blur-sm  px-2 py-1 rounded-md text-xs md:text-sm transition-all duration-300 ${
+        className={`absolute -top-8 left-1/2 -translate-x-1/2  whitespace-nowrap bg-zinc-900 backdrop-blur-sm  px-2 py-1 rounded-md text-xs md:text-sm transition-all duration-300 ${
           showNotification
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-1 pointer-events-none"
