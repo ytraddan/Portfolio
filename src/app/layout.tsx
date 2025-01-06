@@ -6,10 +6,10 @@ import Navigation from "@/components/Navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Polegoshko Mark",
+  title: "ytraddan",
   description: "Frontend Developer Portfolio",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
   },
 };
 
