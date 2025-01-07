@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Contacts() {
   return (
@@ -25,6 +25,11 @@ export default function Contacts() {
 
 function Email() {
   const [showNotification, setShowNotification] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const copyEmail = async () => {
     await navigator.clipboard.writeText("1nightshelter@gmail.com");
@@ -53,6 +58,8 @@ function Email() {
       </div>
       <div
         className={`absolute -top-8 left-1/2 -translate-x-1/2  whitespace-nowrap bg-zinc-900 backdrop-blur-sm  px-2 py-1 rounded-md text-xs md:text-sm transition-all duration-300 ${
+          !isMounted ? "hidden" : ""
+        } ${
           showNotification
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-1 pointer-events-none"
