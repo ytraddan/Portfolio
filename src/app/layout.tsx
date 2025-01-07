@@ -20,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} bg-background min-h-screen text-foreground overflow-x-hidden`}
+      >
         <div className="grid h-screen grid-rows-[auto,1fr]">
           <div className="glow glow-1" />
           <div className="glow glow-2" />

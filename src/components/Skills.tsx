@@ -27,7 +27,10 @@ export default function Skills() {
       <h2 className="text-2xl font-bold">Technical Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4">
         {skills.map((category) => (
-          <div key={category.title} className="brutalist-skills-card">
+          <div
+            key={category.title}
+            className="bg-neutral-900/50 p-6 rounded-xl transition-colors duration-300 shadow-xl shadow-blue-500/20"
+          >
             <h3 className="font-bold text-xl text-neutral-200 mb-2">
               {category.title}
             </h3>

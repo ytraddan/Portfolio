@@ -10,7 +10,7 @@ export default function Contacts() {
         <Link
           key={label}
           href={url}
-          className="group brutalist-card-small flex items-center gap-2 text-xs md:text-base"
+          className="group flex items-center gap-2 text-xs md:text-base"
         >
           {iconSVG}
           <span className="group-hover:text-blue-500 transition-colors">
@@ -36,7 +36,7 @@ function Email() {
     <div className="relative">
       <div
         onClick={copyEmail}
-        className="group brutalist-card-small flex items-center gap-2 text-xs md:text-base cursor-pointer"
+        className="group flex items-center gap-2 text-xs md:text-base cursor-pointer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

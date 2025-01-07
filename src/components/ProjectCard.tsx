@@ -19,7 +19,7 @@ export default function ProjectCard({
   technologies,
 }: ProjectCardProps) {
   return (
-    <div className="brutalist-card space-y-4">
+    <div className="bg-neutral-900/50 border-2 border-neutral-800 p-6 rounded-xl hover:border-blue-500   transition-[border,box-shadow] duration-300 space-y-4 hover:shadow-xl hover:shadow-blue-500/20">
       <Link href={liveUrl}>
         <div className="relative aspect-video w-full overflow-hidden rounded-lg">
           <Image
@@ -53,7 +53,7 @@ export default function ProjectCard({
             </Link>
           </div>
         </div>
-        <p className="brutalist-text">{description}</p>
+        <p className="text-neutral-400">{description}</p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <span
